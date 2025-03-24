@@ -1,4 +1,4 @@
-package com.example.batteryandcontactsapp
+package com.example.batteryandcontactsapp.batteryManager
 
 import android.app.Application
 import android.content.BroadcastReceiver

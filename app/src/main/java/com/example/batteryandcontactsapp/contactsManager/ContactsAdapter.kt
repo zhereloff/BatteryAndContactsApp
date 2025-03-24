@@ -1,4 +1,4 @@
-package com.example.batteryandcontactsapp.contacts
+package com.example.batteryandcontactsapp.contactsManager
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

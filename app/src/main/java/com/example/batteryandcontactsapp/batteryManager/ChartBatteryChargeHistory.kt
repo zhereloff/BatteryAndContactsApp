@@ -1,4 +1,4 @@
-package com.example.batteryandcontactsapp
+package com.example.batteryandcontactsapp.batteryManager
 
 import android.graphics.Color
 import com.example.batteryandcontactsapp.services.LoggerService.Companion.log

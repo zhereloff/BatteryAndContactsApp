@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.batteryandcontactsapp.contacts.ContactsFragment
+import com.example.batteryandcontactsapp.batteryManager.BatteryViewModel
+import com.example.batteryandcontactsapp.batteryManager.ChartBatteryChargeHistory
+import com.example.batteryandcontactsapp.contactsManager.ContactsFragment
 import com.example.batteryandcontactsapp.databinding.ActivityMainBinding
 import com.example.batteryandcontactsapp.services.LoggerService.Companion.log
 

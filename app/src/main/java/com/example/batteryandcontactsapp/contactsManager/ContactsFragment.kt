@@ -1,4 +1,4 @@
-package com.example.batteryandcontactsapp.contacts
+package com.example.batteryandcontactsapp.contactsManager
 
 import android.Manifest
 import android.content.pm.PackageManager
