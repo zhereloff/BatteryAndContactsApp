@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Contacts and battery"
+            android:textAllCaps="true"
+            android:textColor="#01395B"
+            android:textSize="28dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/pbBatteryLevel"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="91dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center_horizontal"
+                android:progress="20"
+                android:progressDrawable="@drawable/ic_battery"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvBatteryLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="100%"
+                android:textColor="#c88b96"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/pbBatteryLevel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Battery charge history"
+            android:textColor="#01395B"
+            android:textSize="20sp"
+            android:layout_gravity="start"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartBatteryChartHistory"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#7F6884DC" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
+        <Button
+            android:id="@+id/btnShowContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#01395B"
+            android:text="Show contacts"
+            android:textColor="#c88b96"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- Контейнер для фрагмента (изначально скрыт) -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/white"/>
+
+</FrameLayout>
